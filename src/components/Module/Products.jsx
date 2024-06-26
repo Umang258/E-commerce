@@ -197,6 +197,7 @@ const Products = ({ handleAddToWishlist }) => {
                   <Card.Title>{elem.product_name}</Card.Title>
                   <Card.Text>${elem.price}</Card.Text>
                   <Link to="/ProductDetail" className="btn btn-primary mx-4">View details</Link>
+                  <Link to="/ShoppingCart" className="btn btn-primary mx-4"><MDBIcon fas icon="cart-plus" /></Link>
                   <Link to="/wishlist" className="btn mx-4"><MDBIcon className="me mdn-icon" icon="heart" size="lg" /></Link>
                 </Card.Body>
               </Card>

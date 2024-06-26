@@ -198,14 +198,18 @@ function Home() {
                     style={{
                       backgroundImage: `url(${process.env.PUBLIC_URL}/image/footer/a1.png)`,
                       backgroundSize: "cover",
+                      borderRadius: "15px",
                     }}
                   >
                     <Card.Body
                       className="pt-7 text-center"
                       style={{
                         fontFamily: "DM Serif Display",
-                        margin: "30px",
-                        color: "white",
+                        margin: "45px",
+                        color: "black",
+                        backgroundColor: "white",
+                        opacity: "0.9",
+                        borderRadius: "20px"
                       }}
                     >
                       <p
@@ -236,6 +240,7 @@ function Home() {
                     className="back back-background min-height-500"
                     style={{
                       backgroundImage: `url(${process.env.PUBLIC_URL}/image/footer/a1.png)`,
+                      borderRadius: "15px",
                     }}
                   ></div>
                 </Card>
@@ -250,15 +255,23 @@ function Home() {
                     style={{
                       backgroundImage: `url(${process.env.PUBLIC_URL}/image/footer/a2.png)`,
                       backgroundSize: "cover",
+                      borderRadius: "15px",
                     }}
                   >
                     <Card.Body
                       className="pt-7 text-center"
-                      style={{ fontFamily: "DM Serif Display", color: "white" }}
+                      style={{
+                        fontFamily: "DM Serif Display",
+                        color: "black",
+                        margin: "54px",
+                        backgroundColor: "white",
+                        opacity: "0.9",
+                        borderRadius: "20px",
+                      }}
                     >
                       <p
                         className="text-lg text text-uppercase "
-                        style={{ fontSize: "50px", marginTop: "95px" }}
+                        style={{ fontSize: "50px", margin: "10%" }}
                       >
                         Artisan
                       </p>
@@ -278,6 +291,7 @@ function Home() {
                     className="back back-background min-height-500"
                     style={{
                       backgroundImage: `url(${process.env.PUBLIC_URL}/image/footer/a2.png)`,
+                      borderRadius: "15px",
                     }}
                   ></div>
                 </Card>

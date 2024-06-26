@@ -14,8 +14,9 @@ import Ajrakh from "./components/pages/Ajrakh";
 import Chikankari from "./components/pages/Chikankari";
 import Madhubani from "./components/pages/Madhubani";
 import IncenseSticks from "./components/pages/IncenseSticks";
-
-
+import Payment  from "./components/pages/Payment";
+import ShoppingCart from "./components/pages/ShoppingCart";
+import OrderPlace from "./components/pages/OrderPlace";
 
 function App() {
   return (
@@ -36,6 +37,10 @@ function App() {
           <Route exact path="/Ajrakh" element={<Ajrakh />} />
           <Route exact path="/Chikankari" element={<Chikankari />} />
           <Route exact path="/IncenseSticks" element={<IncenseSticks />} />
+          <Route exact path="/ShoppingCart" element={<ShoppingCart />} />
+          <Route exact path="/Payment" element={<Payment />} />
+          <Route exact path="/OrderPlace" element={<OrderPlace/>} />
+          
 
 
 

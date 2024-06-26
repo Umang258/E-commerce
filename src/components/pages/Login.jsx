@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import FacebookAuth from 'react-facebook-auth';
 
 const styles = {
   body: {
@@ -46,7 +47,14 @@ const styles = {
     backgroundColor: '#0056b3',
   },
 };
+const authenticate = (response) => {
+  console.log(response);
+}
 
+const MyFacebookButton = ({ onClick }) => {
+    return ( 
+      <button onClick={onClick}>Facebook login</button>)
+}
 function Login() {
   return (
     <div style={styles.body}>
@@ -80,6 +88,12 @@ function Login() {
             >
               Login
             </Button>
+            
+            <FacebookAuth
+      appId="823563109737529"
+      callback={authenticate}
+      component={MyFacebookButton}
+    />
           </Form>
         </div>
       </Container>

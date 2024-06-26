@@ -92,7 +92,7 @@ export default function App() {
       <div className="text-center p-4" style={{ backgroundColor: "#E9A401" }}>
 
       <div> 
-       <MDBContainer>
+       <MDBContainer style={{maxWidth: "auto"}}>
        <MDBRow style={{height:"70px"}}>
       
         <MDBCol size='sm'>
@@ -163,10 +163,10 @@ export default function App() {
 
        </div>
 
-
+      
         <Nav
           className="Navs"
-          style={{ display: "flex", marginRight: "30%", fontSize: "large" }}
+          style={{ display: "flex", margin: "auto", fontSize: "large"}}
         >
           <Nav.Link className="nav-link">
             <Link to="/" className="nav-items">
@@ -188,7 +188,25 @@ export default function App() {
               Signup
             </Link>
           </Nav.Link>
-        </Nav>
+          
+          <img
+                          className="made-in-india"
+                          src={process.env.PUBLIC_URL + "/image/footer/f2.png"}
+                          alt="Fourth slide"
+                          style={{ maxWidth: "10rem", objectFit: "cover", position: "relative", left: "300px",  }}
+                      />
+          
+          
+
+        
+       
+                 </Nav>     
+                      
+
+        
+        <div style={{color:"black", marginLeft:"50px", marginRight:"50px"}} >  
+           <hr className='horizontal black mb-4 mt-lg-4 my-4' />
+           </div>
 
         <footer className="footer">
           <div className="footer-section social-media">

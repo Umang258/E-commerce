@@ -44,7 +44,7 @@
 .navbar-top {
   display: flex;
   justify-content: center;
-  background-color: #D4B04C;
+  background-color: #d4b04c;
   color: whitesmoke;
   padding: 10px 0;
 }
@@ -54,8 +54,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #FFFBF5;
-  color: #D4B04C;
+  background-color: #fffbf5;
+  color: #d4b04c;
   padding: 20px;
 }
 
@@ -67,22 +67,22 @@
 
 .search-input {
   padding: 8px;
-  border: 1px solid #D4B04C;
+  border: 1px solid #d4b04c;
   border-radius: 4px 0 0 4px;
   outline: none;
 }
 
 .search-button {
   padding: 8px;
-  background-color: #D4B04C;
-  border: 1px solid #D4B04C;
+  background-color: #d4b04c;
+  border: 1px solid #d4b04c;
   border-radius: 0 4px 4px 0;
   color: whitesmoke;
   cursor: pointer;
 }
 
 .search-button:hover {
-  background-color: #C3A43C;
+  background-color: #c3a43c;
 }
 
 /* Logo Container */
@@ -99,24 +99,20 @@
 }
 /* Navbar Icons */
 .navbar-middle .nav-link {
-  color: #D4B04C;
+  color: #d4b04c;
 }
 
 .navbar-middle .nav-link:hover {
-  color: #C3A43C;
+  color: #c3a43c;
 }
-
 
 /* Custom Navbar */
 
-.custom-navbar .nav-link:hover
-
- {
-  color: #E9A401 !important; /* Optional: slightly change color on hover */
+.custom-navbar .nav-link:hover {
+  color: #e9a401 !important; /* Optional: slightly change color on hover */
 }
 
 /* Home Page Styles */
-
 
 .container-fluid-section {
   /* background-image: url('/public/image/section.png'); Updated path */
@@ -134,8 +130,6 @@
   width: 100%;
 }
 
-
-
 .sale-image {
   width: 100%;
   max-width: 300px;
@@ -147,7 +141,7 @@
 
 /* New Styles for Text Colors */
 .hero-text-yellow {
-  color: #BA6E41;
+  color: #ba6e41;
   font-size: 50px;
   font-family: "DM Serif Display", serif;
   font-style: italic;
@@ -168,7 +162,7 @@
 }
 
 .hero-span {
-  color: #E9A401;
+  color: #e9a401;
 }
 
 /* SearchBar.css */
@@ -241,7 +235,6 @@
   margin: 0 10px;
   color: black;
 }
-
 
 .Navs {
   justify-content: center;
@@ -326,7 +319,7 @@
 .ad-rotate {
   transform-style: preserve-3d;
   transition: transform 0.8s;
-  position:relative;
+  position: relative;
 }
 
 .ad-rotate:hover {
@@ -340,7 +333,7 @@
 .front,
 .back {
   backface-visibility: hidden;
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -363,9 +356,44 @@
 
 .pt-7 {
   padding-top: 1rem;
-
 }
 
 .buttons-group .btn {
   margin-right: 0.5rem;
+}
+
+/* /Shoppoingcart/ */
+@media (min-width: 1025px) {
+  .h-custom {
+    height: 100vh !important;
+  }
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+
+.card-registration .select-arrow {
+  top: 13px;
+}
+
+.bg-grey {
+  background-color: #e2c87f;
+}
+
+@media (min-width: 992px) {
+  .card-registration-2 .bg-grey {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .card-registration-2 .bg-grey {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
 }
