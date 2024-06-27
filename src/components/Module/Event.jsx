@@ -1,6 +1,6 @@
 // src/components/Products.jsx
 import React from "react";
-import { Button, Card, Container, Row, Col } from "react-bootstrap";
+import { Card, Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import { MDBIcon } from "mdbreact";
@@ -67,6 +67,7 @@ const Event = ({ handleAddToWishlist }) => {
         <Row className="d-flex justify-content-center">
           {items.map((elem) => (
             <Col key={elem.id} sm={12} md={6} lg={4} xl={4} className="mb-4">
+              <Link to="/ProductDetail">
               <Card>
                 <Card.Img
                   variant="top"
@@ -75,12 +76,15 @@ const Event = ({ handleAddToWishlist }) => {
                 <Card.Body>
                   <Card.Title>{elem.product_name}</Card.Title>
                   <Card.Text>${elem.price}</Card.Text>
-                  <Button variant="primary">View</Button>
-                  <Link to="/wishlist" class="btn mx-4">
+                  <Link to="/ShoppingCart" className="btn btn-warning mx-2">
+                  <MDBIcon fas icon="cart-plus" />
+                  </Link>
+                  <Link to="/wishlist" class="btn mx-1">
                     <MDBIcon className="me mdn-icon" icon="heart" size="lg" />
                   </Link>
                 </Card.Body>
               </Card>
+              </Link>
             </Col>
           ))}
         </Row>

@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
     return (
       <>    
 
-    <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
+    <section className="h-100 h-custom" style={{ backgroundColor: "#eee",fontFamily: "DM Serif Display" }}>
    
       <MDBContainer className="py-5 h-100">
         <MDBRow className="justify-content-center align-items-center h-100">

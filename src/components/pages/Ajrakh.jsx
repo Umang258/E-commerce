@@ -103,7 +103,24 @@ const Ajrakh = ({ handleAddToWishlist }) => {
         padding: '20px 0', // Optional: Adjust padding for better spacing
       }}
     >
-      <div className="title" style={{color:"#E9A401"}}><h3 style={{justifyContent: "center", textAlign: "center", fontSize: "30px"}}><b>ALL PRODUCTS</b></h3></div>
+       <div className="p-3 position-relative mt-n4 mx-5 z-index-2">
+        <div
+          className="contact py-4 pe-1"
+          style={{
+            backgroundImage: "linear-gradient(195deg, #ec407a, #D4B04C",
+            boxShadow:
+              "0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(233, 30, 99, .4)",
+            borderRadius: ".5rem",
+          }}
+        >
+          <h5
+            className="text-center text-white"
+            style={{ fontWeight: "bold", fontFamily: "DM Serif Display" }}
+          >
+            AJRAKH
+          </h5>
+        </div>
+      </div>
       <Container>
         <Row>
           {items.map((elem) => (

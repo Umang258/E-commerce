@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   MDBCardBody,
   MDBCol,
@@ -7,13 +7,15 @@ import {
   MDBRow,
   MDBTooltip,
   MDBTypography,
-} from 'mdb-react-ui-kit';
-import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+} from "mdb-react-ui-kit";
+import { Link } from "react-router-dom";
 
 export default function OrderPlace() {
   return (
-    <div className="mx-auto my-4 max-w-6xl md:my-6">
+    <div
+      className="mx-auto my-4 max-w-6xl md:my-6"
+      style={{ fontFamily: "DM Serif Display", fontSize: "1.5rem" }}
+    >
       <div className="overflow-hidden rounded-xl shadow">
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Contact Info */}
@@ -150,7 +152,7 @@ export default function OrderPlace() {
 
                         <div
                           className="mt-6 flex items-center"
-                          style={{ backgroundColor: 'white' }}
+                          style={{ backgroundColor: "white" }}
                         >
                           <input
                             id="same-as-shipping"
@@ -172,7 +174,7 @@ export default function OrderPlace() {
 
                       <div
                         className="mt-6 flex justify-end border-t border-gray-200 pt-4"
-                        style={{ backgroundColor: 'white', height: '65px' }}
+                        style={{ backgroundColor: "white", height: "65px" }}
                       >
                         <Link to="/Payment">
                           <button
@@ -201,15 +203,14 @@ export default function OrderPlace() {
                   >
                     <img
                       alt="Madhubani artwork"
-                      src={process.env.PUBLIC_URL + '/image/madhubani/m11.png'}
+                      src={process.env.PUBLIC_URL + "/image/madhubani/m11.png"}
                       className="w-100"
                     />
-                    <Button href="#!">
-                      <div
-                        className="mask"
-                        style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
-                      ></div>
-                    </Button>
+
+                    <div
+                      className="mask"
+                      style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
+                    ></div>
                   </MDBRipple>
                 </MDBCol>
 
@@ -223,8 +224,8 @@ export default function OrderPlace() {
                   </div>
 
                   <MDBTooltip
-                    wrapperProps={{ size: 'sm' }}
-                    wrapperClass="me-1 mb-2"
+                    wrapperProps={{ size: "sm" }}
+                    wrapperClass="me-1 mb-2 btn btn-warning"
                     title="Remove item"
                   >
                     <MDBIcon fas icon="trash" />
@@ -248,15 +249,14 @@ export default function OrderPlace() {
                   >
                     <img
                       alt="Madhubani artwork"
-                      src={process.env.PUBLIC_URL + '/image/madhubani/m11.png'}
+                      src={process.env.PUBLIC_URL + "/image/madhubani/m11.png"}
                       className="w-100"
                     />
-                    <Button href="#!">
-                      <div
-                        className="mask"
-                        style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
-                      ></div>
-                    </Button>
+
+                    <div
+                      className="mask"
+                      style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
+                    ></div>
                   </MDBRipple>
                 </MDBCol>
 
@@ -270,8 +270,8 @@ export default function OrderPlace() {
                   </div>
 
                   <MDBTooltip
-                    wrapperProps={{ size: 'sm' }}
-                    wrapperClass="me-1 mb-2"
+                    wrapperProps={{ size: "sm" }}
+                    wrapperClass="me-1 mb-2 btn btn-warning"
                     title="Remove item"
                   >
                     <MDBIcon fas icon="trash" />

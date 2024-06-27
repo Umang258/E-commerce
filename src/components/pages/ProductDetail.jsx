@@ -1,19 +1,70 @@
-import React from 'react';
-import { Container, Row, Col, Button, Image, Card } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState } from "react";
+
+import { Container, Row, Col, Button, Card } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+const images = [
+  "/image/sticks/s1.png", // Main image
+  "/image/sticks/s2.png", //Thumbnail 1
+  "/image/sticks/s4.png", //Thumbnail 2
+  "/image/sticks/s3.png", //Thumbnail 3
+  "/image/sticks/s5.png", //Thumbnail 4
+];
 
 const ProductDetail = () => {
+  const [mainImage, setMainImage] = useState(images[0]);
+
   return (
     <Container className="py-5">
-      <Row>
+      <div className="p-0 position-relative mt-n4 mx-5 z-index-2">
+        <div
+          className="contact py-4 pe-1"
+          style={{
+            backgroundImage: "linear-gradient(195deg, #ec407a, #D4B04C",
+            boxShadow:
+              "0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(233, 30, 99, .4)",
+            borderRadius: ".5rem",
+          }}
+        >
+          <h5
+            className="text-center text-white"
+            style={{ fontWeight: "bold", fontFamily: "DM Serif Display" }}
+          >
+            Product Details
+          </h5>
+        </div>
+      </div>
+      <Row className="py-5">
         <Col lg={6} className="d-flex align-items-center">
-          <Image src={process.env.PUBLIC_URL + "/image/sticks/s2.png"} alt="ecommerce" fluid rounded />
+          <div className="product-page">
+            <div className="product-image-container">
+              <div className="product-image">
+                <div className="zoom-container">
+                  <img src={mainImage} alt="Product" />
+                </div>
+              </div>
+              <div className="thumbnail-gallery">
+                {images.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Thumbnail ${index + 1}`}
+                    onClick={() => setMainImage(image)}
+                    className={image === mainImage ? "active" : ""}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="product-details"></div>
+          </div>
         </Col>
         <Col lg={6}>
           <Card className="border-0">
             <Card.Body>
               <Card.Subtitle className="mb-2 text-muted">PHOOL</Card.Subtitle>
-              <Card.Title className="mb-3">PHOOL AYODHYA SOUMYA CHANDAN INCENSE STICKS</Card.Title>
+              <Card.Title className="mb-3">
+                PHOOL AYODHYA SOUMYA CHANDAN INCENSE STICKS
+              </Card.Title>
               <Row className="mb-4">
                 <Col>
                   <div className="d-flex align-items-center">
@@ -54,39 +105,28 @@ const ProductDetail = () => {
                 </Col>
               </Row>
               <Card.Text>
-              Embark on a spiritual journey with the Phool Ayodhya Soumya Chandan Incense Sticks.<br/>
-
-❀ Handcrafted using the sacred flowers from temples in Ayodhya<br />
-❋ Made using a blend of flowers, 100% pure extracts of Chandan, and traditional herbs<br/>
-❈ The pack consists of 40 units<br/>
-❂ Long burning time of 40-45 minutes per stick<br/>
-❁ The fragrance is rich and aromatic with warm undertones of amber and wood<br/>
-❃ The authentic scent of Chandan helps in refreshing and energizing the mind and body<br/>
-✼ These sticks are ideal for your daily rituals and prayers<br/>
+                Embark on a spiritual journey with the Phool Ayodhya Soumya
+                Chandan Incense Sticks.
+                <br />
+                ❀ Handcrafted using the sacred flowers from temples in Ayodhya
+                <br />
+                ❋ Made using a blend of flowers, 100% pure extracts of Chandan,
+                and traditional herbs
+                <br />
+                ❈ The pack consists of 40 units
+                <br />
+                ❂ Long burning time of 40-45 minutes per stick
+                <br />
+                ❁ The fragrance is rich and aromatic with warm undertones of
+                amber and wood
+                <br />
+                ❃ The authentic scent of Chandan helps in refreshing and
+                energizing the mind and body
+                <br />
+                ✼ These sticks are ideal for your daily rituals and prayers
+                <br />
               </Card.Text>
-              {/* <Row className="mt-4 mb-3">
-                <Col xs={3}>
-                  <Form.Label>Color</Form.Label>
-                </Col>
-                <Col>
-                  <Button variant="outline-secondary" className="rounded-circle p-2 me-2"></Button>
-                  <Button variant="dark" className="rounded-circle p-2 me-2"></Button>
-                  <Button variant="warning" className="rounded-circle p-2"></Button>
-                </Col>
-              </Row> */}
-              {/* <Row className="mb-4">
-                <Col xs={3}>
-                  <Form.Label>Size</Form.Label>
-                </Col>
-                <Col>
-                  <Form.Select>
-                    <option>SM</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                  </Form.Select>
-                </Col>
-              </Row> */}
+
               <Row className="align-items-center">
                 <Col>
                   <h4 className="mb-0">$58.00</h4>
@@ -95,7 +135,10 @@ const ProductDetail = () => {
                   <Button variant="warning" className="me-2">
                     Add to Cart
                   </Button>
-                  <Button variant="outline-secondary" className="rounded-circle p-0">
+                  <Button
+                    variant="outline-secondary"
+                    className="rounded-circle p-0"
+                  >
                     <i className="bi bi-heart"></i>
                   </Button>
                 </Col>

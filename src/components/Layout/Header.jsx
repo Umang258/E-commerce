@@ -42,7 +42,7 @@ function Header() {
                 <MDBIcon className="me mdn-icon" icon="heart" size="lg" />
               </Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/Cart">
+            <LinkContainer to="/ShoppingCart">
                 <Nav.Link>
                 <MDBIcon className="me mdn-icon"  icon="cart-arrow-down" size="lg" />
                 </Nav.Link>

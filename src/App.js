@@ -8,7 +8,6 @@ import Signup from "./components/pages/Signup";
 import Wishlist from "./components/Module/Wishlist";
 import Products from "./components/Module/Products";
 import ProductDetail from "./components/pages/ProductDetail";
-import Cart from "./components/pages/Cart";
 import ContactUs from "./components/pages/ContactUs";
 import Ajrakh from "./components/pages/Ajrakh";
 import Chikankari from "./components/pages/Chikankari";
@@ -31,7 +30,6 @@ function App() {
           <Route exact path="/products" element={<Products />} />
           <Route exact path="/productdetail" element={<ProductDetail />} />
           <Route path="/product/:productId" component={ProductDetail} />
-          <Route exact path="/Cart" element={<Cart />} />
           <Route exact path="/ContactUs" element={<ContactUs />} />
           <Route exact path="/Madhubani" element={<Madhubani />} />
           <Route exact path="/Ajrakh" element={<Ajrakh />} />

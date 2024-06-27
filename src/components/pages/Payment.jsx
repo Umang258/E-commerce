@@ -15,9 +15,10 @@ import {
   Card,
   CardContent,
 } from '@mui/material';
-import GPayIcon from '@mui/icons-material/Payment'; // Replace with the appropriate icon
-import CODIcon from '@mui/icons-material/LocalAtm'; // Replace with the appropriate icon
-import PhonePeIcon from '@mui/icons-material/PhoneAndroid'; // Replace with the appropriate icon
+import PaymentIcon from '@mui/icons-material/Payment';
+import LocalAtmIcon from '@mui/icons-material/LocalAtm';
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import { MDBCard, MDBContainer, MDBRow} from 'mdb-react-ui-kit';
 
 const Payment = () => {
   const [paymentMethod, setPaymentMethod] = useState('googlePay');
@@ -36,10 +37,31 @@ const Payment = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, margin: '0 auto', p: 2 }}>
-      <Typography variant="h6" sx={{ mb: 2 }}>
-        Recommended Payment Options
-      </Typography>
+    <section className="h-300 h-custom" style={{ backgroundColor: "#eee" }}>
+      <MDBContainer className="py-3 h-300">
+            <MDBRow className="justify-content-center align-items-center h-300 --bs-gutter-x: -8.5rem;">
+            <MDBCard className="card-registration card-registration-1" style={{ borderRadius: "15px" }}>
+    <Box sx={{ maxWidth: 800, margin: '0 auto', p: 4 }}>
+      
+      <div className="p-3 position-relative mt-n2 mx-2 z-index-2">
+        <div
+          className="contact py-4 pe-1"
+          style={{
+            backgroundImage: "linear-gradient(195deg, #ec407a, #D4B04C",
+            boxShadow:
+              "0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(233, 30, 99, .4)",
+            borderRadius: ".5rem",
+          }}
+        >
+          <h5
+            className="text-center text-white"
+            style={{ fontWeight: "bold", fontFamily: "DM Serif Display" }}
+          >
+            Recommended Payments Options
+          </h5>
+        </div>
+      </div>
+      
       <FormControl component="fieldset">
         <RadioGroup
           aria-label="payment method"
@@ -58,7 +80,7 @@ const Payment = () => {
                     <Box component="span" sx={{ ml: 1, color: 'green' }}>
                       1 Offer
                     </Box>
-                    <GPayIcon sx={{ ml: 'auto', color: 'grey.500' }} />
+                    <PaymentIcon sx={{ ml: 'auto', color: 'grey.500' }} />
                   </Box>
                 }
               />
@@ -100,7 +122,7 @@ const Payment = () => {
                 label={
                   <Box display="flex" alignItems="center">
                     <Typography>Cash on Delivery (Cash/UPI)</Typography>
-                    <CODIcon sx={{ ml: 'auto', color: 'grey.500' }} />
+                    <LocalAtmIcon sx={{ ml: 'auto', color: 'grey.500' }} />
                   </Box>
                 }
               />
@@ -124,15 +146,26 @@ const Payment = () => {
                 label={
                   <Box display="flex" alignItems="center">
                     <Typography>PhonePe</Typography>
-                    <PhonePeIcon sx={{ ml: 'auto', color: 'grey.500' }} />
+                    <PhoneAndroidIcon sx={{ ml: 'auto', color: 'grey.500' }} />
                   </Box>
                 }
               />
+              {paymentMethod === 'phonePe' && (
+                <Box sx={{ mt: 2 }}>
+                  <Button variant="contained" color="primary" fullWidth sx={{ backgroundColor: '#ff3366' }}>
+                    PAY NOW
+                  </Button>
+                </Box>
+              )}
             </CardContent>
           </Card>
         </RadioGroup>
       </FormControl>
     </Box>
+    </MDBCard>
+    </MDBRow>
+    </MDBContainer>
+    </section>
   );
 };
 

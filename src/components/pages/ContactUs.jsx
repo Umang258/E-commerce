@@ -2,9 +2,10 @@ import React from "react";
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { MDBIcon } from "mdbreact";
+import { Box } from '@mui/material';
 
 const ContactUs = () => {
-  return (
+  return (<>
     <section
       className="py-7 bg-cover position-relative"
       style={{
@@ -15,7 +16,7 @@ const ContactUs = () => {
       <div className="mask bg-gradient-dark"></div>
       <Container className="position-relative z-index-2">
         <Row>
-          <Col lg={5} className="contact" style={{fontFamily: "DM Serif Display", fontStyle: "italic", marginTop: "1px"}}>
+          <Col lg={6} className="contact" style={{fontFamily: "DM Serif Display", fontStyle: "italic", marginTop: "1px"}}>
             <h2 className="text-black ">
               <b>
                 Get <span className="hero-span text-warming">in</span> Touch
@@ -41,11 +42,12 @@ const ContactUs = () => {
               <div className="ms-5">
                 <h5 className="text-black">Find us at the office</h5>
                 <p className="text-black text-sm">
-                  Bld Mihail Kogalniceanu, nr. 8,
+                  Department of Computer Science,
+                  Informatics And Computational Sciences Programme,            
                   <br />
-                  7652 Bucharest,
+                  MLSU University Udaipur,
                   <br />
-                  Romania
+                  Rajasthan
                 </p>
               </div>
             </div>
@@ -67,11 +69,15 @@ const ContactUs = () => {
               <div className="ms-5">
                 <h5 className="text-black">Give us a ring</h5>
                 <p className="text-black text-sm">
-                  Michael Jordan
+                  Umang, Vishnu, Sudarshan, Komal
                   <br />
-                  +40 762 321 762
+                  +91 73002 28722;
+                  +91 94617 70403;
+                  +91 98284 10476;
+                  +91 6367 220384;
+
                   <br />
-                  Mon - Fri, 8:00-22:00
+                  Mon - Fri, 8:00-15:00
                 </p>
               </div>
             </div>
@@ -147,6 +153,19 @@ const ContactUs = () => {
         </Row>
       </Container>
     </section>
+
+    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '70vh' }}>
+      <iframe
+        title="Location Map"
+        width="80%"
+        height="400"
+        
+        src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Computer%20Science%20Department%20and%20MCA%20BCA%20department+(Artisan)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+      >
+        <a href="https://www.gps.ie/">gps tracker sport</a>
+      </iframe>
+    </Box>
+    </>
   );
 };
 
