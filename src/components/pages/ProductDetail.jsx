@@ -8,7 +8,7 @@ const images = [
   "/image/sticks/s2.png", //Thumbnail 1
   "/image/sticks/s4.png", //Thumbnail 2
   "/image/sticks/s3.png", //Thumbnail 3
-  "/image/sticks/s5.png", //Thumbnail 4
+  
 ];
 
 const ProductDetail = () => {

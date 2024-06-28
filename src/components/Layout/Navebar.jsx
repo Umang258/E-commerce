@@ -64,26 +64,7 @@ const Navebar = () => {
                   onMouseLeave={handleMouseLeave}
                   onClick={toggleDropdown}
                 >
-                  <div className="dropdown-section">
-                    <h3>Sarees</h3>
-                    <ul>
-                      <LinkContainer to="/Chikankari">
-                        <Nav.Link>
-                          <li>Chikankari</li>
-                        </Nav.Link>
-                      </LinkContainer>
-                      <LinkContainer to="/Madhubani">
-                        <Nav.Link>
-                          <li>Madhubani</li>
-                        </Nav.Link>
-                      </LinkContainer>
-                      <LinkContainer to="/Ajrakh">
-                        <Nav.Link>
-                          <li>Ajrakh</li>
-                        </Nav.Link>
-                      </LinkContainer>
-                    </ul>
-                  </div>
+                  
                   <div className="dropdown-section">
                     <h3>Religious items</h3>
                     <ul>
@@ -106,25 +87,62 @@ const Navebar = () => {
                   </div>
 
                   <div className="dropdown-section">
-                  <h3>Others</h3>
+                  <h3>Home and living</h3>
                   <ul>
                     <LinkContainer to="/ajrakh">
-                      <Nav.Link>Home and living</Nav.Link>
+                      <Nav.Link><li>Wall Decore</li></Nav.Link>
                     </LinkContainer>
                   
                   
                     <LinkContainer to="/ajrakh">
-                      <Nav.Link>Bags</Nav.Link>
+                      <Nav.Link><li>Home Decore</li></Nav.Link>
                     </LinkContainer>
                   
                   
                     <LinkContainer to="/ajrakh">
-                      <Nav.Link>Toys</Nav.Link>
+                      <Nav.Link><li>Kitchen & Dining</li></Nav.Link>
                     </LinkContainer>
-
-                    <LinkContainer to="/ajrakh">
-                      <Nav.Link>Clay Products</Nav.Link>
-                    </LinkContainer>
+                    </ul>
+                  </div>
+                  
+                  <div className="dropdown-section">
+                    <h3>Sarees</h3>
+                    <ul>
+                      <LinkContainer to="/Chikankari">
+                        <Nav.Link>
+                          <li>Chikankari</li>
+                        </Nav.Link>
+                      </LinkContainer>
+                      <LinkContainer to="/Madhubani">
+                        <Nav.Link>
+                          <li>Madhubani</li>
+                        </Nav.Link>
+                      </LinkContainer>
+                      <LinkContainer to="/Ajrakh">
+                        <Nav.Link>
+                          <li>Ajrakh</li>
+                        </Nav.Link>
+                      </LinkContainer>
+                    </ul>
+                  </div>
+                  <div className="dropdown-section">
+                    <h3>OTHERS</h3>
+                    <ul>
+                      <LinkContainer to="/Chikankari">
+                        <Nav.Link>
+                          <li>Toys</li>
+                        </Nav.Link>
+                      </LinkContainer>
+                      <LinkContainer to="/Madhubani">
+                        <Nav.Link>
+                          <li>Vases</li>
+                        </Nav.Link>
+                      </LinkContainer>
+                      <LinkContainer to="/Ajrakh">
+                        <Nav.Link>
+                          <li>Bags</li>
+                        </Nav.Link>
+                      </LinkContainer>
                     </ul>
                   </div>
                   <div className="dropdown-images d-flex justify-content-center">

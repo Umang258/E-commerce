@@ -84,7 +84,7 @@ export default function App() {
             <form onSubmit={handleSearchSubmit} className="search-bar">
               <input
                 type="text"
-                placeholder="Ex.xyz123@gmail.com.."
+                placeholder="Ex.Artisan@gmail.com.."
                 value={searchTerm}
                 onChange={handleSearchChange}
               />
@@ -93,104 +93,104 @@ export default function App() {
           </MDBContainer>
         </section>
 
-        <div className="text-center p-4" style={{ backgroundColor: "#E9A401" }}>
-          <div>
-            <MDBContainer style={{ maxWidth: "auto" }}>
-              <MDBRow style={{ height: "70px" }}>
-                <MDBCol size="sm">
-                  <div>Free Shipping</div>
+        <div style={{ backgroundColor: "wheat", borderRadius: "45px" }}>
+          <MDBContainer style={{ maxWidth: "auto" }}>
+            <MDBRow style={{ height: "70px" }}>
+              <MDBCol size="sm">
+                <div>Free Shipping</div>
 
-                  <img
-                    className="d-block w-70"
-                    src={process.env.PUBLIC_URL + "/image/footer/i1.png"}
-                    alt="Fourth slide"
-                    style={{
-                      maxWidth: "11rem",
-                      objectFit: "cover",
-                      margin: "auto",
-                      marginTop: "-45px",
-                    }}
-                  />
-                </MDBCol>
-                <MDBCol size="sm">
-                  100% Protection
-                  <img
-                    className="d-block w-70"
-                    src={process.env.PUBLIC_URL + "/image/footer/i2.png"}
-                    alt="Fourth slide"
-                    style={{
-                      maxWidth: "6rem",
-                      objectFit: "cover",
-                      margin: "auto",
-                    }}
-                  />
-                </MDBCol>
-                <MDBCol size="sm">
-                  Secure Payment
-                  <img
-                    className="d-block w-70"
-                    src={process.env.PUBLIC_URL + "/image/footer/i3.png"}
-                    alt="Fourth slide"
-                    style={{
-                      maxWidth: "6rem",
-                      objectFit: "cover",
-                      margin: "auto",
-                    }}
-                  />
-                </MDBCol>
-                <MDBCol size="sm">
-                  Assured Quality
-                  <img
-                    className="d-block w-70"
-                    src={process.env.PUBLIC_URL + "/image/footer/i4.png"}
-                    alt="Fourth slide"
-                    style={{
-                      maxWidth: "6rem",
-                      objectFit: "cover",
-                      margin: "auto",
-                    }}
-                  />
-                </MDBCol>
-                <MDBCol size="sm">
-                  Authentic Products
-                  <img
-                    className="d-block w-70"
-                    src={process.env.PUBLIC_URL + "/image/footer/i5.png"}
-                    alt="Fourth slide"
-                    style={{
-                      maxWidth: "6rem",
-                      objectFit: "cover",
-                      margin: "auto",
-                    }}
-                  />
-                </MDBCol>
-                <MDBCol size="sm">
-                  Best Price Promise
-                  <img
-                    className="d-block w-70"
-                    src={process.env.PUBLIC_URL + "/image/footer/i3.png"}
-                    alt="Fourth slide"
-                    style={{
-                      maxWidth: "6rem",
-                      objectFit: "cover",
-                      margin: "auto",
-                    }}
-                  />
-                </MDBCol>
-              </MDBRow>
-            </MDBContainer>
-            <br />
-            <div
-              style={{
-                color: "black",
-                marginLeft: "50px",
-                marginRight: "50px",
-              }}
-            >
-              <hr className="horizontal black mb-4 mt-lg-4 my-4" />
-            </div>
+                <img
+                  className="d-block w-70"
+                  src={process.env.PUBLIC_URL + "/image/footer/i1.png"}
+                  alt="Fourth slide"
+                  style={{
+                    maxWidth: "8rem",
+                    objectFit: "cover",
+                    marginTop: "-1rem"
+                    
+                  }}
+                />
+              </MDBCol>
+              <MDBCol size="sm">
+                100% Protection
+                <img
+                  className="d-block w-70"
+                  src={process.env.PUBLIC_URL + "/image/footer/i2.png"}
+                  alt="Fourth slide"
+                  style={{
+                    maxWidth: "6rem",
+                    objectFit: "cover",
+                    margin: "auto",
+                  }}
+                />
+              </MDBCol>
+              <MDBCol size="sm">
+                Secure Payment
+                <img
+                  className="d-block w-70"
+                  src={process.env.PUBLIC_URL + "/image/footer/i3.png"}
+                  alt="Fourth slide"
+                  style={{
+                    maxWidth: "6rem",
+                    objectFit: "cover",
+                    margin: "auto",
+                  }}
+                />
+              </MDBCol>
+              <MDBCol size="sm">
+                Assured Quality
+                <img
+                  className="d-block w-70"
+                  src={process.env.PUBLIC_URL + "/image/footer/i4.png"}
+                  alt="Fourth slide"
+                  style={{
+                    maxWidth: "6rem",
+                    objectFit: "cover",
+                    margin: "auto",
+                  }}
+                />
+              </MDBCol>
+              <MDBCol size="sm">
+                Authentic Products
+                <img
+                  className="d-block w-70"
+                  src={process.env.PUBLIC_URL + "/image/footer/i5.png"}
+                  alt="Fourth slide"
+                  style={{
+                    maxWidth: "6rem",
+                    objectFit: "cover",
+                    margin: "auto",
+                  }}
+                />
+              </MDBCol>
+              <MDBCol size="sm">
+                Best Price Promise
+                <img
+                  className="d-block w-70"
+                  src={process.env.PUBLIC_URL + "/image/footer/i3.png"}
+                  alt="Fourth slide"
+                  style={{
+                    maxWidth: "6rem",
+                    objectFit: "cover",
+                    margin: "auto",
+                  }}
+                />
+              </MDBCol>
+            </MDBRow>
+          </MDBContainer>
+          <br />
+          <div
+            style={{
+              color: "black",
+              marginLeft: "50px",
+              marginRight: "50px",
+            }}
+          >
+            <hr className="horizontal black mb-1 mt-lg-5 my-4" />
           </div>
+        </div>
 
+        <div className="text-center p-4" style={{ backgroundColor: "#E9A401" }}>
           <Nav
             className="Navs"
             style={{ display: "flex", margin: "auto", fontSize: "large" }}
@@ -235,7 +235,7 @@ export default function App() {
             <hr className="horizontal black mb-4 mt-lg-4 my-4" />
           </div>
 
-          <footer className="footer" >
+          <footer className="footer">
             <div className="footer-section social-media">
               <Link to="/Logiin" className="iconitem">
                 <MDBIcon style={{ color: "black" }} fab icon="facebook-f" />
@@ -258,7 +258,7 @@ export default function App() {
                 id="payment-option"
                 src={process.env.PUBLIC_URL + "/image/footer/p5.png"}
                 alt="Fourth slide"
-                style={{height: "2rem"}}
+                style={{ height: "2rem" }}
               />
 
               <img
@@ -279,7 +279,7 @@ export default function App() {
                 id="payment-option"
                 src={process.env.PUBLIC_URL + "/image/footer/p8.png"}
                 alt="Fourth slide"
-                style={{ marginLeft: "12px",height: "2rem" }}
+                style={{ marginLeft: "12px", height: "2rem" }}
               />
             </div>
           </footer>

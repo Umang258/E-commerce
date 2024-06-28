@@ -16,6 +16,7 @@ import IncenseSticks from "./components/pages/IncenseSticks";
 import Payment  from "./components/pages/Payment";
 import ShoppingCart from "./components/pages/ShoppingCart";
 import OrderPlace from "./components/pages/OrderPlace";
+import RouteConstants from "./constants/RouteConstants";
 
 function App() {
   return (
@@ -23,21 +24,21 @@ function App() {
       <Routes> 
         <Route path="/" element={<Layouts />}>
           <Route index element={<Home />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="/signup" element={<Signup />} />
-          <Route exact path="/wishlist" element={<Wishlist />} />
-          <Route exact path="/products" element={<Products />} />
-          <Route exact path="/productdetail" element={<ProductDetail />} />
+          <Route exact path={RouteConstants.About} element={<About />} />
+          <Route exact path={RouteConstants.Login} element={<Login />} />
+          <Route exact path={RouteConstants.Signup} element={<Signup />} />
+          <Route exact path={RouteConstants.Wishlist} element={<Wishlist />} />
+          <Route exact path={RouteConstants.Products} element={<Products />} />
+          <Route exact path={RouteConstants.ProductDetail} element={<ProductDetail />} />
           <Route path="/product/:productId" component={ProductDetail} />
-          <Route exact path="/ContactUs" element={<ContactUs />} />
-          <Route exact path="/Madhubani" element={<Madhubani />} />
-          <Route exact path="/Ajrakh" element={<Ajrakh />} />
-          <Route exact path="/Chikankari" element={<Chikankari />} />
-          <Route exact path="/IncenseSticks" element={<IncenseSticks />} />
-          <Route exact path="/ShoppingCart" element={<ShoppingCart />} />
-          <Route exact path="/Payment" element={<Payment />} />
-          <Route exact path="/OrderPlace" element={<OrderPlace/>} />
+          <Route exact path={RouteConstants.ContactUs} element={<ContactUs />} />
+          <Route exact path={RouteConstants.Madhubani} element={<Madhubani />} />
+          <Route exact path={RouteConstants.Ajrakh} element={<Ajrakh />} />
+          <Route exact path={RouteConstants.Chikankari} element={<Chikankari />} />
+          <Route exact path={RouteConstants.IncenseSticks} element={<IncenseSticks />} />
+          <Route exact path={RouteConstants.ShoppingCart} element={<ShoppingCart />} />
+          <Route exact path={RouteConstants.Payment} element={<Payment />} />
+          <Route exact path={RouteConstants.OrderPlace} element={<OrderPlace/>} />
           
 
 
