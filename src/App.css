@@ -199,9 +199,8 @@
 
 .footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+  justify-content: space-around;
+  align-items: center;  
   background-color: transparent;
   color: #fff;
 }
@@ -214,11 +213,6 @@
 .social-media .fa-icon {
   margin-right: 10px;
 }
-
-.payment-icons .fa-icon {
-  margin-left: 10px;
-}
-
 .company-name p {
   margin: 0;
   font-size: 1.2rem;

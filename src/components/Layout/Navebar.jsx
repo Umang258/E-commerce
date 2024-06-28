@@ -104,20 +104,28 @@ const Navebar = () => {
                       </LinkContainer>
                     </ul>
                   </div>
+
                   <div className="dropdown-section">
+                  <h3>Others</h3>
+                  <ul>
                     <LinkContainer to="/ajrakh">
                       <Nav.Link>Home and living</Nav.Link>
                     </LinkContainer>
-                  </div>
-                  <div className="dropdown-section">
+                  
+                  
                     <LinkContainer to="/ajrakh">
                       <Nav.Link>Bags</Nav.Link>
                     </LinkContainer>
-                  </div>
-                  <div className="dropdown-section">
+                  
+                  
                     <LinkContainer to="/ajrakh">
                       <Nav.Link>Toys</Nav.Link>
                     </LinkContainer>
+
+                    <LinkContainer to="/ajrakh">
+                      <Nav.Link>Clay Products</Nav.Link>
+                    </LinkContainer>
+                    </ul>
                   </div>
                   <div className="dropdown-images d-flex justify-content-center">
                     <div className="image-card">
@@ -135,7 +143,7 @@ const Navebar = () => {
                         src={process.env.PUBLIC_URL + "/image/footer/a1.png"}
                         alt="Sale 1"
                       />
-                      <p>Basic Tees</p>
+                      <p>Recommended</p>
                       <a href="/basic-tees">Shop now</a>
                     </div>
                   </div>

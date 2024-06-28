@@ -123,7 +123,8 @@
   .navbar-dropdown {
     position: absolute;
     width: auto;
-    padding: 10px 0px;
+    padding: 10px 127px;
+    border-radius: 0px 0px 100px 100px !important;
     
   }
 

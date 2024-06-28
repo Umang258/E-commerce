@@ -235,7 +235,7 @@ export default function App() {
             <hr className="horizontal black mb-4 mt-lg-4 my-4" />
           </div>
 
-          <footer className="footer" style={{height: "0"}}>
+          <footer className="footer" >
             <div className="footer-section social-media">
               <Link to="/Logiin" className="iconitem">
                 <MDBIcon style={{ color: "black" }} fab icon="facebook-f" />
@@ -251,32 +251,32 @@ export default function App() {
               </Link>
             </div>
             <div className="footer-section company-name">
-              <p style={{ fontSize: "medium" }}>© 2024, ARTISAN.</p>
+              <p>© 2024, ARTISAN.</p>
             </div>
             <div className="footer-section payment-icons">
               <img
-                className="payment-option"
+                id="payment-option"
                 src={process.env.PUBLIC_URL + "/image/footer/p5.png"}
                 alt="Fourth slide"
                 style={{height: "2rem"}}
               />
 
               <img
-                className="payment-option"
+                id="payment-option"
                 src={process.env.PUBLIC_URL + "/image/footer/p6.png"}
                 alt="Fourth slide"
                 style={{ marginLeft: "12px" }}
               />
 
               <img
-                className="payment-option"
+                id="payment-option"
                 src={process.env.PUBLIC_URL + "/image/footer/p7.png"}
                 alt="Fourth slide"
                 style={{ marginLeft: "12px" }}
               />
 
               <img
-                className="payment-option"
+                id="payment-option"
                 src={process.env.PUBLIC_URL + "/image/footer/p8.png"}
                 alt="Fourth slide"
                 style={{ marginLeft: "12px",height: "2rem" }}
