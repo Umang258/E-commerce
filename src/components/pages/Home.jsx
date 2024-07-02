@@ -113,7 +113,7 @@ function Home() {
               src={process.env.PUBLIC_URL + "/image/Carousel/c1.png"}
               alt="First Slide"
             />
-            <Carousel.Caption></Carousel.Caption>
+            
           </Carousel.Item>
           <Carousel.Item>
             <img
@@ -121,7 +121,7 @@ function Home() {
               src={process.env.PUBLIC_URL + "/image/Carousel/c2.png"}
               alt="Second Slide"
             />
-            <Carousel.Caption></Carousel.Caption>
+           
           </Carousel.Item>
           <Carousel.Item>
             <img
@@ -129,7 +129,7 @@ function Home() {
               src={process.env.PUBLIC_URL + "/image/Carousel/c3.png"}
               alt="Third Slide"
             />
-            <Carousel.Caption></Carousel.Caption>
+            
           </Carousel.Item>
           <Carousel.Item>
             <img
@@ -137,7 +137,15 @@ function Home() {
               src={process.env.PUBLIC_URL + "/image/Carousel/c4.png"}
               alt="Third Slide"
             />
-            <Carousel.Caption></Carousel.Caption>
+           
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100 my-3 carousel-image"
+              src={process.env.PUBLIC_URL + "/image/Carousel/c5.png"}
+              alt="Third Slide"
+            />
+           
           </Carousel.Item>
         </Carousel>
       </div>
