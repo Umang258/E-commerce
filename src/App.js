@@ -6,7 +6,6 @@ import Layouts from "./components/Layout/Layouts";
 import Login from "./components/pages/Login";
 import Signup from "./components/pages/Signup";
 import Wishlist from "./components/Module/Wishlist";
-import Products from "./components/Module/Products";
 import ProductDetail from "./components/pages/ProductDetail";
 import ContactUs from "./components/pages/ContactUs";
 import Ajrakh from "./components/pages/Ajrakh";
@@ -17,6 +16,10 @@ import Payment  from "./components/pages/Payment";
 import ShoppingCart from "./components/pages/ShoppingCart";
 import OrderPlace from "./components/pages/OrderPlace";
 import RouteConstants from "./constants/RouteConstants";
+import CategoryDetail from "./components/pages/CategoryDetail";
+import AllProducts from "./components/Module/AllProducts";
+import Product from "./components/pages/Product";
+// import AllProducts from "./components/Module/AllProducts";
 
 function App() {
   return (
@@ -28,9 +31,11 @@ function App() {
           <Route exact path={RouteConstants.Login} element={<Login />} />
           <Route exact path={RouteConstants.Signup} element={<Signup />} />
           <Route exact path={RouteConstants.Wishlist} element={<Wishlist />} />
-          <Route exact path={RouteConstants.Products} element={<Products />} />
+          <Route exact path={RouteConstants.AllProducts} element={<AllProducts />} /> 
+          <Route exact path={RouteConstants.Product} element={<Product/>} />
           <Route exact path={RouteConstants.ProductDetail} element={<ProductDetail />} />
           <Route path="/product/:productId" component={ProductDetail} />
+          <Route exact path={RouteConstants.CategoryDetail} element={<CategoryDetail/>} />
           <Route exact path={RouteConstants.ContactUs} element={<ContactUs />} />
           <Route exact path={RouteConstants.Madhubani} element={<Madhubani />} />
           <Route exact path={RouteConstants.Ajrakh} element={<Ajrakh />} />

@@ -1,3 +1,4 @@
+
 const RouteConstants = {
     About:'/about',
     Ajrakh: '/Ajrakh',
@@ -10,7 +11,10 @@ const RouteConstants = {
     Payment: '/Payment',
     ProductDetail: '/ProductDetail',
     ShoppingCart: '/ShoppingCart',
-    Signup: '/Signup'
+    Signup: '/Signup',
+    AllProducts:'/allproducts',
+    CategoryDetail:'/categorydetail/:id',
+    Product:'/product/:id'
     
 }
 

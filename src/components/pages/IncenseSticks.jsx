@@ -1,98 +1,100 @@
 // src/components/Products.jsx
-import React from "react";
+import React, { useState } from "react";
 import { Card, Container, Row, Col } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from "react-router-dom";
 import { MDBIcon } from "mdbreact";
 
 const IncenseSticks = ({ handleAddToWishlist }) => {
-  const items = [
-    {
-      id: 1,
-      product_name: "Product 1",
-      price: 955,
-      image: "/image/sticks/s1.png",
-    },
-    {
-      id: 2,
-      product_name: "Product 2",
-      price: 955,
-      image: "/image/sticks/s2.png",
-    },
-    {
-      id: 3,
-      product_name: "Product 3",
-      price: 955,
-      image: "/image/sticks/s3.png",
-    },
-    {
-      id: 4,
-      product_name: "Product 4",
-      price: 955,
-      image: "/image/sticks/s4.png",
-    },
-    {
-      id: 4,
-      product_name: "Product 4",
-      price: 955,
-      image: "/image/sticks/s5.png",
-    },
-    {
-      id: 4,
-      product_name: "Product 4",
-      price: 955,
-      image: "/image/sticks/s6.png",
-    },
-    {
-      id: 4,
-      product_name: "Product 4",
-      price: 955,
-      image: "/image/sticks/s7.png",
-    },
-    {
-      id: 4,
-      product_name: "Product 4",
-      price: 955,
-      image: "/image/sticks/s8.png",
-    },
-    {
-      id: 4,
-      product_name: "Product 4",
-      price: 955,
-      image: "/image/sticks/s9.png",
-    },
-    {
-      id: 4,
-      product_name: "Product 4",
-      price: 955,
-      image: "/image/sticks/s10.png",
-    },
-    {
-      id: 4,
-      product_name: "Product 4",
-      price: 955,
-      image: "/image/sticks/s11.png",
-    },
-    {
-      id: 4,
-      product_name: "Product 4",
-      price: 955,
-      image: "/image/sticks/s12.png",
-    },
-    {
-      id: 4,
-      product_name: "Product 4",
-      price: 955,
-      image: "/image/sticks/s13.png",
-    },
-    {
-      id: 4,
-      product_name: "Product 4",
-      price: 955,
-      image: "/image/sticks/s14.png",
-    },
+  // const items = [
+  //   {
+  //     id: 1,
+  //     product_name: "Product 1",
+  //     price: 955,
+  //     image: "/image/sticks/s1.png",
+  //   },
+  //   {
+  //     id: 2,
+  //     product_name: "Product 2",
+  //     price: 955,
+  //     image: "/image/sticks/s2.png",
+  //   },
+  //   {
+  //     id: 3,
+  //     product_name: "Product 3",
+  //     price: 955,
+  //     image: "/image/sticks/s3.png",
+  //   },
+  //   {
+  //     id: 4,
+  //     product_name: "Product 4",
+  //     price: 955,
+  //     image: "/image/sticks/s4.png",
+  //   },
+  //   {
+  //     id: 4,
+  //     product_name: "Product 4",
+  //     price: 955,
+  //     image: "/image/sticks/s5.png",
+  //   },
+  //   {
+  //     id: 4,
+  //     product_name: "Product 4",
+  //     price: 955,
+  //     image: "/image/sticks/s6.png",
+  //   },
+  //   {
+  //     id: 4,
+  //     product_name: "Product 4",
+  //     price: 955,
+  //     image: "/image/sticks/s7.png",
+  //   },
+  //   {
+  //     id: 4,
+  //     product_name: "Product 4",
+  //     price: 955,
+  //     image: "/image/sticks/s8.png",
+  //   },
+  //   {
+  //     id: 4,
+  //     product_name: "Product 4",
+  //     price: 955,
+  //     image: "/image/sticks/s9.png",
+  //   },
+  //   {
+  //     id: 4,
+  //     product_name: "Product 4",
+  //     price: 955,
+  //     image: "/image/sticks/s10.png",
+  //   },
+  //   {
+  //     id: 4,
+  //     product_name: "Product 4",
+  //     price: 955,
+  //     image: "/image/sticks/s11.png",
+  //   },
+  //   {
+  //     id: 4,
+  //     product_name: "Product 4",
+  //     price: 955,
+  //     image: "/image/sticks/s12.png",
+  //   },
+  //   {
+  //     id: 4,
+  //     product_name: "Product 4",
+  //     price: 955,
+  //     image: "/image/sticks/s13.png",
+  //   },
+  //   {
+  //     id: 4,
+  //     product_name: "Product 4",
+  //     price: 955,
+  //     image: "/image/sticks/s14.png",
+  //   },
    
-  ];
+  // ];
+
+const [items,setItems] = useState()
 
   return (
     <div

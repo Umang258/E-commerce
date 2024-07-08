@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Event from "../Module/Event";
 import "../../App.css"; // Import the corrected CSS file
+import AllCategories from "../Module/AllCategories";
 
 function Home() {
   const [index, setIndex] = useState(0);
@@ -164,6 +165,10 @@ function Home() {
 
       <div>
         <Event />
+      </div>
+
+      <div>
+        <AllCategories/>
       </div>
 
       <div className="container">
