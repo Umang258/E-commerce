@@ -5,8 +5,19 @@ import { MDBIcon } from "mdbreact"; // Import MDBIcon component
 import "../../App.css"; // Import custom CSS file
 import { NavDropdown } from "react-bootstrap";
 import Navebar from "./Navebar"; // import Navebar component
+import { useAuth } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+  const { isAuthenticate, logout } = useAuth();
+  
+
+  const handleLogout = () => {
+    logout();
+    navigate("/");
+  };
+
   return (
     <>
       <div className="navbar-top">
@@ -32,7 +43,6 @@ function Header() {
             src={process.env.PUBLIC_URL + "/image/logo1.png"}
             alt="LOGO"
           />
-        
         </div>
 
         <div>
@@ -43,24 +53,29 @@ function Header() {
               </Nav.Link>
             </LinkContainer>
             <LinkContainer to="/ShoppingCart">
-                <Nav.Link>
-                <MDBIcon className="me mdn-icon"  icon="cart-arrow-down" size="lg" />
-                </Nav.Link>
-              </LinkContainer>
-            <LinkContainer to="/login">
               <Nav.Link>
-                <MDBIcon className="me-2 mdb-icon" icon="user" size="lg" />
+                <MDBIcon
+                  className="me mdn-icon"
+                  icon="cart-arrow-down"
+                  size="lg"
+                />
               </Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/signup">
-              <Nav.Link>
+            {isAuthenticate ? (
+              <Nav.Link onClick={handleLogout}>
                 <MDBIcon
                   className="me-2 mdb-icon"
                   icon="sign-in-alt"
                   size="lg"
                 />
               </Nav.Link>
-            </LinkContainer>
+            ) : (
+              <LinkContainer to="/login">
+                <Nav.Link>
+                  <MDBIcon className="me-2 mdb-icon" icon="user" size="lg" />
+                </Nav.Link>
+              </LinkContainer>
+            )}
           </Nav>
         </div>
       </div>

@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
-
   MDBCol,
   MDBContainer,
   MDBCard,
@@ -11,113 +10,146 @@ import {
   MDBTooltip,
   MDBIcon,
 } from "mdb-react-ui-kit";
+import { useAuth } from "../../context/AuthContext";
 
 
-export default function wishlist() {
-  return (<>
-    <section className="h-300 h-custom" style={{ backgroundColor: "#eee", }}>
+export default function Wishlist() {
+  const { user } = useAuth();
+  const [wishlist, setWishlist] = useState([]);
+  const [currentUser, setCurrentUser] = useState([]);
 
-    <div className="h-100 h-custom">
-    <MDBContainer className="py-3 h-300">
-            <MDBRow className="justify-content-center align-items-center h-300 --bs-gutter-x: -8.5rem;">
-            
-      
-        <MDBCard className="card-registration card-registration-1" style={{ borderRadius: "15px", fontFamily: "DM Serif Display"}}>
-          <MDBCol>
-            <MDBTable responsive>
-              <MDBTableHead>
-                <tr>
-                  <th scope="col" className="h5">
-                    Whislist
-                  </th>
-                  <th scope="col">Type</th>
-                  <th scope="col">Price</th>
-                  <th scope="col">Quantity</th>
-                </tr>
-              </MDBTableHead>
-              <MDBTableBody>
-                <tr>
-                  <th scope="row">
-                    <div className="d-flex align-items-center">
-                      <img
-                        src={process.env.PUBLIC_URL + "/image/toys/t9.png"}
-                        fluid
-                        className="rounded-3"
-                        style={{ width: "120px" }}
-                        alt="Book"
-                      />
-                      <div className="flex-column ms-4">
-                        <p className="mb-2">Thinking, Fast and Slow</p>
-                        <p className="mb-0">Daniel Kahneman</p>
-                      </div>
-                    </div>
-                  </th>
-                  <td className="align-middle">
-                    <p className="mb-0" style={{ fontWeight: "500" }}>
-                      Sarees
-                    </p>
-                  </td>
-                 
-                  <td className="align-middle">
-                    <p className="mb-0" style={{ fontWeight: "500" }}>
-                      $9.99
-                    </p>
-                  </td>
-                  <td className="align-middle">
-                  <MDBTooltip wrapperProps={{ size: "sm" }} wrapperClass="me-1 mb-2 btn btn-warning"
-                    title="Remove item"  >
-                    <MDBIcon fas icon="trash" />
-                  </MDBTooltip>
-                   </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <div className="d-flex align-items-center">
-                      <img
-                        src={process.env.PUBLIC_URL + "/image/toys/t2.png"}
-                        fluid
-                        className="rounded-3"
-                        style={{ width: "120px" }}
-                        alt="Book"
-                      />
-                      <div className="flex-column ms-4">
-                        <p className="mb-2">
-                          Homo Deus: A Brief History of Tomorrow
-                        </p>
-                        <p className="mb-0">Yuval Noah Harari</p>
-                      </div>
-                    </div>
-                  </th>
-                  <td className="align-middle">
-                    <p className="mb-0" style={{ fontWeight: "500" }}>
-                       Toys
-                    </p>
-                  </td>
-               
-                  <td className="align-middle">
-                    <p className="mb-0" style={{ fontWeight: "500" }}>
-                      $13.50
-                    </p>
-                  </td>
-                  <td className="align-middle">
-                    <div class="d-flex flex-row align-items-center">
-                     
-                    <MDBTooltip wrapperProps={{ size: "sm" }} wrapperClass="me-1 mb-2 btn btn-warning"
-                    title="Remove item"  >
-                    <MDBIcon fas icon="trash" />
-                  </MDBTooltip>
-                    </div>
-                  </td>
-                </tr>
-              </MDBTableBody>
-            </MDBTable>
-          </MDBCol>
-        </MDBCard>
-        </MDBRow>
-      </MDBContainer>
-    </div>
-    </section>
+  useEffect(() => {
+    // Fetch wishlist items from the backend
+    fetch(`http://localhost:4001/user/profile`, {
+      method: "GET",
+      headers: {
+        authorization: `Beader ${localStorage.getItem("accessToken")}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => setCurrentUser(data.user))
+      .catch((error) => console.log("Error fetching wishlist:", error));
+  }, []);
 
+  useEffect(() => {
+    if (currentUser && currentUser?._id) {
+      // Fetch wishlist items from the backend
+      fetch(`http://localhost:4001/getWishlist/${currentUser?._id}`, {
+        method: "GET",
+      })
+        .then((res) => res.json())
+        .then((data) => setWishlist(data))
+        .catch((error) => console.log("Error fetching wishlist:", error));
+    }
+  }, [currentUser]);
+
+  const handleRemoveFromWishlist = (productId) => {
+    debugger;
+    fetch("http://localhost:4001/removeFromWishlist", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userId: user._id,
+        productId,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Remove response:", data); // Add logging for the response
+        if (data.status === 200) {
+          setWishlist((prevItems) =>
+            prevItems.filter((item) => item.productId._id !== productId)
+          );
+          console.log(
+            "cart",
+            wishlist.filter((item) => item.productId._id !== productId)
+          );
+        } else {
+          console.log("Failed to remove item:", data);
+        }
+      })
+      .catch((error) =>
+        console.log("Error removing item from wishlist:", error)
+      );
+  };
+
+  return (
+    <>
+      <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
+        <MDBContainer className="py-3 h-100">
+          <MDBRow className="justify-content-center align-items-center h-100">
+            <MDBCard
+              className="card-registration card-registration-1"
+              style={{ borderRadius: "15px", fontFamily: "DM Serif Display" }}
+            >
+              <MDBCol>
+                <MDBTable responsive>
+                  <MDBTableHead>
+                    <tr>
+                      <th scope="col" className="h5">
+                        Wishlist
+                      </th>
+                      <th scope="col">Product Name</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Remove</th>
+                    </tr>
+                  </MDBTableHead>
+                  <MDBTableBody>
+                    {wishlist.map((item) => (
+                      <tr key={item._id}>
+                        <th scope="row">
+                          <div className="d-flex align-items-center">
+                            <img
+                              src={`http://localhost:4001${item.productId.thumbnail}`}
+                              fluid
+                              className="rounded-3"
+                              style={{ width: "120px" }}
+                              alt=""
+                            />
+                           
+                          </div>
+                        </th>
+                        <td className="align-middle">
+                        <div className="flex-column ms-4">
+                              <p className="mb-2">
+                                
+                              </p>
+                              <p className="mb-0">{item.productId.productname}</p>
+                            </div>
+                        </td>
+                        <td className="align-middle">
+                          <p className="mb-0" style={{ fontWeight: "500" }}>
+                            ₹{item.productId.price}
+                          </p>
+                        </td>
+                        <td className="align-middle">
+                          {/* <MDBTooltip
+                            wrapperProps={{ size: "sm" }}
+                            wrapperClass="me-1 mb-2 btn btn-warning"
+                            title="Remove item"
+                          > */}
+                            <a
+                              href="#!"
+                              className="text-muted"
+                              onClick={() =>
+                                handleRemoveFromWishlist(item.productId._id)
+                              }
+                            >
+                              <MDBIcon fas icon="trash" />
+                            </a>
+                          {/* </MDBTooltip> */}
+                        </td>
+                      </tr>
+                    ))}
+                  </MDBTableBody>
+                </MDBTable>
+              </MDBCol>
+            </MDBCard>
+          </MDBRow>
+        </MDBContainer>
+      </section>
     </>
   );
 }

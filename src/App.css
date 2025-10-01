@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Removed Tailwind directives (@tailwind base, @tailwind components, @tailwind utilities) due to "unknown at-rule" error in CSS parser. If you need Tailwind, ensure your build tool supports these directives. */
 
 /* Dropdown Menu Styles */
 .custom-navbar .dropdown-menu {
@@ -87,9 +85,13 @@
 
 /* Logo Container */
 .logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
-  margin-top: -50px;
-  margin-bottom: -50px;
 }
 
 .logo {
@@ -115,7 +117,8 @@
 /* Home Page Styles */
 
 .container-fluid-section {
-  /* background-image: url('/public/image/section.png'); Updated path */
+  /* To use a background image, ensure the image exists at the specified path below */
+  /* background-image: url('./image/section.png'); */
   background-size: cover;
   background-position: center;
   min-height: 100vh; /* Ensures background covers entire viewport height */
@@ -226,49 +229,61 @@
 }
 
 .iconitem {
-  margin: 0 10px;
-  color: black;
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  padding: 10px;
 }
 
 .Navs {
   justify-content: center;
   display: flex;
   align-items: center;
-  margin-left: 30%;
+  margin-left: 0;
 }
 
-.nav-items {
-  color: black;
-  text-decoration: none;
+/* Responsive adjustment for .Navs on small screens */
+@media (max-width: 600px) {
+  .Navs {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .Navs > * {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 /* src/index.css */
-.product-page {
-  display: flex;
-  flex-wrap: wrap;
-}
+/* Removed duplicate .product-page definitions. See canonical version below. */
 
 .product-image-container {
   flex: 1;
   max-width: 500px;
 }
 
-.product-image img {
-  width: 100%;
+.product-image {
+  position: relative;
 }
-
 .thumbnail-gallery {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 10px;
 }
 
 .thumbnail-gallery img {
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
   cursor: pointer;
 }
 
+/* Use the following .thumbnail-gallery img.active rule as the authoritative style for active thumbnails. */
+/* If you need a different style for a specific context, use a more specific selector */
 .thumbnail-gallery img.active {
   border: 2px solid #007bff;
 }
@@ -383,13 +398,9 @@
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
   }
-}
-
-@media (max-width: 991px) {
-  .card-registration-2 .bg-grey {
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
-  }
+/* src/ProductPage.css */
+/* Use the .product-page definition from above (lines 92–97) as the canonical version. 
+   Remove or merge any duplicate .product-page blocks below to avoid conflicts. */
 }
 
 /* src/ProductPage.css */
@@ -431,31 +442,57 @@
 
 .thumbnail-gallery {
   display: flex;
-  justify-content: center;
-  margin-top: 10px;
+/* .thumbnail-gallery styles are now combined above to avoid duplication */
 }
-
-.thumbnail-gallery img {
-  width: 60px;
-  height: 60px;
-  margin: 0 10px;
-  border: 2px solid transparent;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.thumbnail-gallery img.active {
-  border-color: orange;
-}
-
 
 @media (min-width: 768px) {
   .product-page {
       flex-direction: row;
-      justify-content: space-between;
+      align-items: flex-start;
+      padding: 10px;
   }
-
-  
+}
+@media(max-width: 412px) {
+  body {
+      margin: 0;
+      padding: 0;
+  }
 }
 
+@media (min-width: 768px) {
+  .product-page {
+      flex-direction: row;
+  }
+}
 
+@media(max-width: 412px) {
+  body {
+      margin: 0;
+      padding: 0;
+  }
+  .navbar-middle {
+      flex-direction: column;
+      padding: 10px;
+      align-items: flex-start;
+  }
+  .logo-container {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 1.2rem;
+  }
+  .product-page {
+      flex-direction: column;
+      padding: 10px;
+  }
+  .product-title {
+      font-size: 1.2em;
+  }
+  .product-price {
+      font-size: 1em;
+  }
+  .footer {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+  }
+}

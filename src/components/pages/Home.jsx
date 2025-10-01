@@ -8,6 +8,7 @@ import Container from "react-bootstrap/Container";
 import Event from "../Module/Event";
 import "../../App.css"; // Import the corrected CSS file
 import AllCategories from "../Module/AllCategories";
+import Footer2 from "../Layout/Footer2";
 
 function Home() {
   const [index, setIndex] = useState(0);
@@ -163,9 +164,9 @@ function Home() {
         />
       </div>
 
-      <div>
+      {/* <div>
         <Event />
-      </div>
+      </div> */}
 
       <div>
         <AllCategories/>
@@ -313,6 +314,7 @@ function Home() {
           </Row>
         </Container>
       </div>
+      <Footer2/>
     </>
   );
 }

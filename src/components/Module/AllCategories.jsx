@@ -46,12 +46,12 @@ const AllCategories = ({ handleAddToWishlist }) => {
               <Link to={`/categorydetail/${elem._id}`}>
               <Card>
                 <Card.Img
-                  variant="top"
+                  variant="top" style={{height:"242px"}}
                   src={process.env.PUBLIC_URL + elem.image}
                 />
                 <Card.Body>
                   <Card.Title>{elem.category}</Card.Title>
-                  <Card.Title>{elem.id}</Card.Title>
+                  {/* <Card.Title>{elem.id}</Card.Title> */}
                
                 </Card.Body>
               </Card>

@@ -12,7 +12,8 @@ import {
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../App.css"; // Ensure you import your custom CSS file
 
-export default function App() {
+
+export default function Footer() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchChange = (e) => {
@@ -28,52 +29,12 @@ export default function App() {
     <>
       <NavDropdown.Divider />
       <MDBFooter
-        bgColor="light"
+        bgColor="white"
         className="text-center text-lg-start text-muted"
         style={{ fontFamily: "DM Serif Display", fontSize: "20px" }}
       >
-        <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-          <MDBContainer className="text-center text-md-start mt-5">
-            <MDBRow className="mt-3">
-              <MDBCol md="4" lg="3" xl="3" className="mx-auto mb-4">
-                <img
-                  className="d-block w-100"
-                  src={process.env.PUBLIC_URL + "/image/footer/f3.jpeg"}
-                  alt="Fourth slide"
-                  style={{ height: "100%", objectFit: "cover" }}
-                />
-              </MDBCol>
-
-              <MDBCol md="4" lg="3" xl="3" className="mx-auto mb-4">
-                <img
-                  className="d-block w-100"
-                  src={process.env.PUBLIC_URL + "/image/footer/f4.png"}
-                  alt="Fourth slide"
-                  style={{ height: "100%", objectFit: "cover" }}
-                />
-              </MDBCol>
-
-              <MDBCol md="4" lg="3" xl="3" className="mx-auto mb-4">
-                <img
-                  className="d-block w-100"
-                  src={process.env.PUBLIC_URL + "/image/footer/f5.png"}
-                  alt="Fourth slide"
-                  style={{ height: "100%", objectFit: "cover" }}
-                />
-              </MDBCol>
-
-              <MDBCol md="4" lg="3" xl="3" className="mx-auto  mb-4">
-                <img
-                  className="d-block w-100"
-                  src={process.env.PUBLIC_URL + "/image/footer/f6.jpeg"}
-                  alt="Fourth slide"
-                  style={{ height: "100%", objectFit: "cover" }}
-                />
-              </MDBCol>
-            </MDBRow>
-          </MDBContainer>
-        </section>
-
+       
+      
         <section className="section">
           <MDBContainer className="text-center text-md-start mt-5">
             <div>
@@ -84,7 +45,7 @@ export default function App() {
             <form onSubmit={handleSearchSubmit} className="search-bar">
               <input
                 type="text"
-                placeholder="Ex.Artisan@gmail.com.."
+                placeholder="Ex. Artisan@gmail.com"
                 value={searchTerm}
                 onChange={handleSearchChange}
               />
@@ -93,8 +54,8 @@ export default function App() {
           </MDBContainer>
         </section>
 
-        <div style={{ backgroundColor: "wheat", borderRadius: "45px" }}>
-          <MDBContainer style={{ maxWidth: "auto" }}>
+        <div style={{ backgroundColor: "#eae9e9",  }}>
+          <MDBContainer style={{ maxWidth: "100%" }}>
             <MDBRow style={{ height: "70px" }}>
               <MDBCol size="sm">
                 <div>Free Shipping</div>
@@ -167,8 +128,8 @@ export default function App() {
                 Best Price Promise
                 <img
                   className="d-block w-70"
-                  src={process.env.PUBLIC_URL + "/image/footer/i3.png"}
-                  alt="Fourth slide"
+                  src={process.env.PUBLIC_URL + "/image/footer/i4.png"}
+                  alt="Best Price Promise"
                   style={{
                     maxWidth: "6rem",
                     objectFit: "cover",
@@ -235,19 +196,20 @@ export default function App() {
             <hr className="horizontal black mb-4 mt-lg-4 my-4" />
           </div>
 
+          </div>
           <footer className="footer">
             <div className="footer-section social-media">
-              <Link to="/Logiin" className="iconitem">
+              <Link to="/Login" className="iconitem">
                 <MDBIcon style={{ color: "black" }} fab icon="facebook-f" />
               </Link>
-              <Link to="" className="iconitem">
+              <Link to="/twitter" className="iconitem">
                 <MDBIcon style={{ color: "black" }} fab icon="twitter" />
               </Link>
               <Link to="/Wishlist" className="iconitem">
                 <MDBIcon style={{ color: "black" }} fab icon="instagram" />
               </Link>
               <Link to="/Wishlist" className="iconitem">
-                <MDBIcon color="black" fab icon="google" />
+                <MDBIcon style={{ color: "black" }} fab icon="google" />
               </Link>
             </div>
             <div className="footer-section company-name">
@@ -255,35 +217,35 @@ export default function App() {
             </div>
             <div className="footer-section payment-icons">
               <img
-                id="payment-option"
+                className="payment-option"
                 src={process.env.PUBLIC_URL + "/image/footer/p5.png"}
                 alt="Fourth slide"
                 style={{ height: "2rem" }}
               />
-
+  
               <img
-                id="payment-option"
+                className="payment-option"
                 src={process.env.PUBLIC_URL + "/image/footer/p6.png"}
                 alt="Fourth slide"
                 style={{ marginLeft: "12px" }}
               />
-
+  
               <img
-                id="payment-option"
+                className="payment-option"
                 src={process.env.PUBLIC_URL + "/image/footer/p7.png"}
                 alt="Fourth slide"
                 style={{ marginLeft: "12px" }}
               />
-
+  
               <img
-                id="payment-option"
+                className="payment-option"
                 src={process.env.PUBLIC_URL + "/image/footer/p8.png"}
                 alt="Fourth slide"
                 style={{ marginLeft: "12px", height: "2rem" }}
               />
             </div>
           </footer>
-        </div>
+        
       </MDBFooter>
     </>
   );

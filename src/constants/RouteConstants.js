@@ -9,12 +9,13 @@ const RouteConstants = {
     Madhubani: '/Madhubani',
     OrderPlace: '/OrderPlace',
     Payment: '/Payment',
-    ProductDetail: '/ProductDetail',
+    ProductDetail: '/ProductDetail/:id',
     ShoppingCart: '/ShoppingCart',
     Signup: '/Signup',
     AllProducts:'/allproducts',
     CategoryDetail:'/categorydetail/:id',
-    Product:'/product/:id'
+    Product:'/product/:id',
+    Wishlist:'/Wishlist'
     
 }
 

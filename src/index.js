@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import DataProvider from './context/DataProvider';
+import { AuthProvider } from './context/AuthContext';
 <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'></link>
 
 
@@ -14,7 +15,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <DataProvider>
-    <App />
+      <AuthProvider>
+
+        <App />
+      </AuthProvider>
     </DataProvider>
   </React.StrictMode>
 );

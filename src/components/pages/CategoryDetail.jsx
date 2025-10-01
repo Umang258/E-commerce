@@ -36,7 +36,7 @@ const CategoryDetail = ({ handleAddToWishlist }) => {
           }}
         >
           <h5 className="text-center text-white" style={{ fontWeight: "bold", fontFamily: "DM Serif Display", fontSize: "30px", fontStyle: "italic" }}>
-            Popular Product
+            SubCategory
           </h5>
         </div>
       </div>
@@ -44,19 +44,24 @@ const CategoryDetail = ({ handleAddToWishlist }) => {
         <Row className="d-flex justify-content-center">
           {subcategory.map((elem) => (
             <Col key={elem._id} sm={12} md={6} lg={4} xl={4} className="mb-4">
-              <Link to="/ProductDetail">
+              <Link to={`/product/${elem._id}`}>
               <Card>
                 <Card.Img
                   variant="top"
-                  // src={process.env.PUBLIC_URL + elem.image}
+                  style={{height:'350px'}}
+                  src={process.env.PUBLIC_URL + elem.image}
                 />
                 <Card.Body>
                   <Card.Title>{elem.subcategory}</Card.Title>
                   {/* <Card.Text>${elem.price}</Card.Text> */}
+                  <div style={{    position: "relative",
+    left: "-10px"}}>
                   <Link to={`/product/${elem._id}`} className="btn btn-warning mx-2">
            
-                  <h6>View {elem._id} </h6>
+                  {/* <h6>View {elem._id} </h6> */}
+                  <button>View Products</button>
                   </Link>
+                  </div>
                  
                 </Card.Body>
               </Card>
